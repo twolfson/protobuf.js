@@ -23,7 +23,27 @@ var pbjsBuf = pbjsCls.encode(pbjsMsg).finish();
 var pbjsStaticCls = require("./data/static_pbjs.js").Test;
 
 // JSON: set up a string and a buffer
-var jsonMsg = payload;
+var jsonMsg = [
+    "Lorem ipsum dolor sit amet.",
+    9000,
+    [
+        20161110,
+        [
+            [
+                1051,
+                151234,
+                false
+            ],
+            1,
+            -42
+        ],
+        [
+            [ true, false, false, true, false, false, true ],
+            204.8
+        ]
+    ],
+    0.25
+];
 var jsonStr = JSON.stringify(jsonMsg);
 var jsonBuf = Buffer_from(jsonStr, "utf8");
 
